@@ -2,55 +2,29 @@
   "framework": "create-react-app",
   "buildCommand": "npm run build",
   "outputDirectory": "build",
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "https://api.himlearning.cfd/api/$1"
-    },
-    {
-      "src": "/static/(.*)",
-      "headers": { "cache-control": "public, max-age=31536000, immutable" },
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/himlogo.png",
-      "dest": "/himlogo.png"
-    },
-    {
-      "src": "/logo192.png",
-      "dest": "/logo192.png"
-    },
-    {
-      "src": "/logo512.png",
-      "dest": "/logo512.png"
-    },
-    {
-      "src": "/favicon.ico",
-      "dest": "/favicon.ico"
-    },
-    {
-      "src": "/manifest.json",
-      "dest": "/manifest.json"
-    },
-    {
-      "src": "/robots.txt",
-      "dest": "/robots.txt"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/api/:path*",
+      "destination": "https://api.himlearning.cfd/api/:path*"
     }
   ],
-  "env": {
-    "REACT_APP_API_URL": "https://api.himlearning.cfd/api",
-    "CI": "false"
-  },
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "https://www.himlearning.cfd" }
       ]
+    },
+    {
+      "source": "/static/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
     }
-  ]
+  ],
+  "trailingSlash": false,
+  "env": {
+    "REACT_APP_API_URL": "https://api.himlearning.cfd/api",
+    "CI": "false"
+  }
 } 
