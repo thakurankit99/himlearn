@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+.Inclusive-addStory-page {
+    width: 1000px;
+    margin: 1.2rem auto;
+}
+
+@media only screen and (max-width: 1001px) {
+    .Inclusive-addStory-page {
+        width: 100%;
+    }
+}
+
+.Inclusive-addStory-page .addStory-form {
+    position: relative;
+    width: 650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addStory-form input#title {
+    width: 100%;
+    height: 55px;
+    outline: 0;
+    border: none;
+    border: rgb(235, 235, 235) solid 1px;
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    font-weight: 450;
+    font-family: 'Balsamiq Sans', cursive;
+    border-bottom: none;
+}
+
+.ck-editor {
+    margin-bottom: 1rem !important;
+    width: 100% !important;
+    min-height: 350px !important;
+    position: relative !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+.ck-editor .ck-editor__main {
+    min-height: 350px !important;
+}
+
+.ck-editor .ck-editor__main .ck-content {
+    min-height: 300px !important;
+    height: 300px !important;
+}
+
+@media only screen and (max-width: 651px) {
+    .Inclusive-addStory-page .addStory-form {
+        width: 80vw;
+    }
+    .ck.ck-reset.ck-editor.ck-rounded-corners {
+        width: 100% !important;
+    }
+}
+
+.ck-editor__top * {
+    border: none !important;
+}
+
+.ck-editor__top {
+    border: rgb(229, 231, 235) solid 1px !important;
+    border-bottom: none !important;
+    padding: 0.8rem 1rem !important;
+    background: rgba(249, 250, 251, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.ck-content {
+    border: rgb(229, 231, 235) solid 1px !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    position: relative !important;
+    z-index: 0 !important;
+}
+
+.ck-toolbar__items,
+.ck-toolbar div {
+    border: none !important;
+}
+
+.ck-toolbar {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+.ck-toolbar .ck-toolbar__items {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+}
+
+.ck-editor__editable {
+    height: 300px !important;
+    min-height: 300px !important;
+    max-height: 500px !important;
+    padding: 1rem 1.5rem !important;
+    transition: all 0.2s ease !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    margin-top: 0 !important;
+    border-top: none !important;
+}
+
+.ck-editor__editable:focus {
+    box-shadow: 0 0 0 2px rgba(147, 51, 234, 0.5) !important;
+    border-color: rgba(147, 51, 234, 0.5) !important;
+}
+
+/* Fix for dropdown overlapping */
+.ck-dropdown__panel {
+    z-index: 9999 !important;
+}
+
+.ck-balloon-panel {
+    z-index: 9999 !important;
+}
+
+/* Ensure CKEditor maintains size during upload */
+.addStory-form.uploading .ck-editor__editable {
+    height: 300px !important;
+    min-height: 300px !important;
+}
+
+.addStory-form.uploading .ck-editor {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* Fix toolbar positioning and prevent overlap */
+.ck-editor__top .ck-sticky-panel__content {
+    position: relative !important;
+    top: 0 !important;
+}
+
+.ck-editor__main {
+    position: relative !important;
+    top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Ensure proper stacking */
+.ck-editor .ck-editor__top {
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+.ck-editor .ck-editor__main {
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+.StoryImageField {
+    border: rgb(235, 235, 235) solid 1px;
+    width: 100%;
+    height: 240px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.StoryImageField svg {
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.StoryImageField .txt {
+    width: 350px;
+    height: auto;
+    margin-top: 14px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.StoryImageField [type="file"] {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-info {
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
+.video-badge, .image-badge {
+    background-color: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.video-badge {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.image-badge {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.addStory-btn {
+    width: 100%;
+    background-color: #0063a5;
+    padding: 0.7rem;
+    color: white;
+    margin-top: 1.9rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.addStory-btn:hover:not(:disabled) {
+    background-color: #004d82;
+    transform: translateY(-1px);
+}
+
+.addStory-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.addStory-btn.uploading {
+    background-color: #4caf50;
+}
+
+.button-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff40;
+    border-top: 2px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Upload Progress Styles */
+.upload-progress-container {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    position: relative;
+    z-index: 10;
+}
+
+/* Prevent layout shifts during upload */
+.addStory-form.uploading {
+    position: relative;
+}
+
+.addStory-form.uploading .ck-editor,
+.addStory-form.uploading input#title,
+.addStory-form.uploading .privacy-selector,
+.addStory-form.uploading .StoryImageField {
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.addStory-form.uploading .ck-editor {
+    opacity: 0.6;
+}
+
+.addStory-form.uploading input#title {
+    opacity: 0.6;
+    background-color: #f8f9fa;
+}
+
+.addStory-form.uploading .privacy-selector {
+    opacity: 0.6;
+}
+
+.addStory-form.uploading .StoryImageField {
+    opacity: 0.6;
+}
+
+.upload-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.progress-percentage {
+    font-weight: bold;
+    color: #0063a5;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0063a5, #4caf50);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    animation: progressShine 2s infinite;
+}
+
+@keyframes progressShine {
+    0% { background-position: -200px 0; }
+    100% { background-position: 200px 0; }
+}
+
+/* Blob Animation */
+@keyframes blob {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+.animate-blob {
+    animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+.upload-note {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.upload-note small {
+    color: #6c757d;
+    font-style: italic;
+}
+
+.dis-btn {
+    width: 100%;
+    background-color: #0063a5;
+    padding: 0.7rem;
+    color: white;
+    margin-top: 1.9rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    opacity: 0.4;
+}
+
+.addStory-form .error_msg {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    background-color: rgba(245, 72, 72, 0.9);
+    color: white;
+    padding: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.addStory-form .success_msg {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    background-color: rgba(14, 218, 75, 0.9);
+    color: white;
+    padding: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.addStory-form .success_msg a {
+    color: black;
+    font-weight: bold;
+    padding-left: 1rem;
+}

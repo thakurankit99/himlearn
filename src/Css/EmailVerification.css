@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap');
+
+.email-verification-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Mukta', sans-serif;
+    padding: 20px;
+}
+
+.verification-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.verification-content {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.verification-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.verification-icon.success {
+    background: #4CAF50;
+    color: white;
+}
+
+.verification-icon.error {
+    background: #f44336;
+    color: white;
+}
+
+.verification-icon.verifying {
+    background: #2196F3;
+    color: white;
+}
+
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.verification-content h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.verification-content p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.login-link {
+    display: inline-block;
+    background: #0063a5;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.login-link:hover {
+    background: #004d82;
+}
+
+.resend-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.resend-section h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.resend-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.resend-form input {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Mukta', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.resend-form input:focus {
+    outline: none;
+    border-color: #0063a5;
+}
+
+.resend-btn {
+    background: #0063a5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: 'Mukta', sans-serif;
+}
+
+.resend-btn:hover:not(:disabled) {
+    background: #004d82;
+}
+
+.resend-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.help-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.help-links a {
+    color: #0063a5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.help-links a:hover {
+    color: #004d82;
+    text-decoration: underline;
+}
+
+/* Success message styling for register page */
+.success_message {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 6px;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    font-family: 'Mukta', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .verification-content {
+        padding: 40px 20px;
+    }
+    
+    .verification-content h2 {
+        font-size: 24px;
+    }
+    
+    .help-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
