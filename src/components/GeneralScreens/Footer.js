@@ -1,12 +1,15 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+// Import logo directly
+import himLogo from '../../assets/images/himlogo.png';
 
 const Footer = () => {
   return (
     <footer className="bg-white border-t border-gray-200">
       <div className="max-w-screen-xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <div className="flex justify-center items-center space-x-3 mb-4">
-            <img src="himlogo.png" alt="HIM Learning" className="h-8 w-auto" />
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center space-x-3 mb-4">
+            <img src={himLogo} alt="HIM Learning" className="h-8 w-auto" />
             <span className="text-xl font-bold text-gray-900">HIM Learning</span>
           </div>
           <p className="text-gray-600 text-sm">

@@ -10,6 +10,7 @@ import SkeletonElement from "../Skeletons/SkeletonElement";
 import { AuthContext } from "../../Context/AuthContext";
 import { getUserPhotoUrl, handleImageError } from '../../utils/imageUtils';
 import NotificationBell from './NotificationBell';
+import himLogo from '../../assets/images/himlogo.png';
 
 const Header = () => {
   const bool = localStorage.getItem("authToken") ? true : false;
@@ -48,7 +49,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3">
-              <img src="himlogo.png" alt="HIM Learning Logo" className="h-8 w-auto" />
+              <img src={himLogo} alt="HIM Learning Logo" className="h-8 w-auto" />
               <span className="text-xl font-bold text-gray-900">HIM Learning</span>
             </Link>
           </div>

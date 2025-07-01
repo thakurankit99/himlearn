@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "HimLearning",
+  "name": "HimLearning - Educational Learning Platform",
   "icons": [
     {
       "src": "favicon.ico",
@@ -16,10 +16,15 @@
       "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "himlogo.png",
+      "type": "image/png",
+      "sizes": "76x76"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#7c3aed",
   "background_color": "#ffffff"
 }
