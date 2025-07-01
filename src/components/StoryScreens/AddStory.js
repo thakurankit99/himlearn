@@ -107,7 +107,7 @@ const AddStory = () => {
             // Redirect to the new story after a short delay
             setTimeout(() => {
                 if (response.data && response.data.data && response.data.data.slug) {
-                    navigate(`/story/${response.data.data.slug}`);
+                    navigate(`/learning-content/${response.data.data.slug}`);
                 } else {
                     navigate('/');
                 }
