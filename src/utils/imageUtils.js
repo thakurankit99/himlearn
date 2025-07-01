@@ -9,6 +9,14 @@ const CLOUDINARY_CONFIG = {
 };
 
 /**
+ * Ensure URL uses HTTPS instead of HTTP
+ */
+const ensureHttps = (url) => {
+    if (!url) return url;
+    return url.replace(/^http:\/\//i, 'https://');
+};
+
+/**
  * Get the correct image URL for user photos
  * Handles both old local paths and new Cloudinary URLs
  */
@@ -18,9 +26,9 @@ export const getUserPhotoUrl = (photo) => {
         return CLOUDINARY_CONFIG.defaultUserImage;
     }
 
-    // If it's already a full URL (Cloudinary), return as is
+    // If it's already a full URL (Cloudinary), return as is but ensure HTTPS
     if (photo.startsWith('http://') || photo.startsWith('https://')) {
-        return photo;
+        return ensureHttps(photo);
     }
 
     // If it's a local filename, construct the local URL
@@ -37,9 +45,9 @@ export const getStoryImageUrl = (image) => {
         return CLOUDINARY_CONFIG.defaultStoryImage;
     }
 
-    // If it's already a full URL (Cloudinary), return as is
+    // If it's already a full URL (Cloudinary), return as is but ensure HTTPS
     if (image.startsWith('http://') || image.startsWith('https://')) {
-        return image;
+        return ensureHttps(image);
     }
 
     // If it's a local filename, construct the local URL
@@ -89,9 +97,9 @@ export const getVideoThumbnail = (videoUrl) => {
 
     try {
         // Replace video upload with image upload and add .jpg extension
-        return videoUrl
+        return ensureHttps(videoUrl
             .replace('/video/upload/', '/image/upload/')
-            .replace(/\.(mp4|mov|avi|webm|mkv)$/, '.jpg');
+            .replace(/\.(mp4|mov|avi|webm|mkv)$/, '.jpg'));
     } catch (error) {
         console.error('Error generating video thumbnail:', error);
         return getStoryImageFallback();
