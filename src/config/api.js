@@ -5,9 +5,8 @@ const API_CONFIG = {
     timeout: 30000
   },
   production: {
-    // Use environment variable if available, otherwise default to relative path
-    // This allows for easy configuration when deploying to Vercel
-    baseURL: process.env.REACT_APP_API_URL || '/api',
+    // Use environment variable if available, otherwise use the new API URL
+    baseURL: process.env.REACT_APP_API_URL || 'https://api.himlearning.cfd/api',
     timeout: 30000
   }
 };

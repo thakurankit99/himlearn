@@ -26,5 +26,9 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#7c3aed",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "description": "Create and share educational content with the HimLearning community",
+  "orientation": "any",
+  "scope": "/",
+  "categories": ["education", "learning", "productivity"]
 }

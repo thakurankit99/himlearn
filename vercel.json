@@ -5,7 +5,7 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "https://himlearnings.ankit.news/api/$1"
+      "dest": "https://api.himlearning.cfd/api/$1"
     },
     {
       "src": "/static/(.*)",
@@ -42,7 +42,15 @@
     }
   ],
   "env": {
-    "REACT_APP_API_URL": "https://himlearnings.ankit.news/api",
+    "REACT_APP_API_URL": "https://api.himlearning.cfd/api",
     "CI": "false"
-  }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "https://www.himlearning.cfd" }
+      ]
+    }
+  ]
 } 
