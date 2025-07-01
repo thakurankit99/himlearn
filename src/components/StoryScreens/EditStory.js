@@ -120,7 +120,7 @@ const EditStory = () => {
       setSuccess(successMessage);
 
       setTimeout(() => {
-        navigate(`/story/${slug}`);
+        navigate(`/learning-content/${slug}`);
       }, 1500);
     } catch (error) {
       setIsUploading(false);

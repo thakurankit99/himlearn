@@ -298,7 +298,7 @@ const DetailStory = () => {
                       story.author._id === activeUser._id ? (
                         <div className="flex items-center space-x-3">
                           <Link
-                            to={`/story/${story.slug}/edit`}
+                            to={`/learning-content/${story.slug}/edit`}
                             className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200"
                           >
                             <FiEdit className="w-4 h-4" />
@@ -316,7 +316,7 @@ const DetailStory = () => {
                         <div className="flex items-center space-x-3">
                           <span className="text-xs font-medium text-primary-600 bg-primary-100 px-2 py-1 rounded">Admin</span>
                           <Link
-                            to={`/story/${story.slug}/edit`}
+                            to={`/learning-content/${story.slug}/edit`}
                             className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200"
                           >
                             <FiEdit className="w-4 h-4" />
